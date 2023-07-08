@@ -1,4 +1,5 @@
 <script>
+  import { RouterView } from 'vue-router';
   export default {
     name: 'App',
   }
@@ -6,7 +7,7 @@
 
 <template>
   <main>
-    <h1>Hello World</h1>
+    <RouterView />
   </main>
 </template>
 
