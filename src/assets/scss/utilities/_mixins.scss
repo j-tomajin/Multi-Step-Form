@@ -19,6 +19,16 @@
     // }
 }
 
+@mixin font(
+    $fw: 400,
+    $color: black,
+    $fs: rem(16)
+) {
+    color: $color;
+    font-weight: $fw;
+    font-size: $fs;
+}
+
 // psuedo
 @mixin psuedo(
     $loc: before, 
