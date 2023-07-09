@@ -1,14 +1,20 @@
 <script>
-  import { RouterLink } from 'vue-router'
+  import { RouterLink, useRouter } from 'vue-router'
 
   export default {
     name: 'AddOnView',
+    setup() {
+      const router = useRouter()
+
+      return { router }
+    }
   }
 </script>
 
 <template>
   <div>
     <h1>Add ons view</h1>
+    <button @click="router.back()">Go Back</button>
     <router-link :to="{name: 'final'}">
       <button>Final</button>
     </router-link>
