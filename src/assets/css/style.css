@@ -146,4 +146,64 @@ a, a:focus, a:visited {
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;
+}
+
+.container {
+  background-color: var(--clr-neutral-w);
+  padding: 1.5rem 2rem;
+  width: min(100% - 32px, 31.25rem);
+  margin-inline: auto;
+}
+
+.danger {
+  color: var(--clr-primary-red);
+  font-size: 0.9375rem;
+}
+
+.border {
+  border: 1px solid var(--clr-neutral-l-gray);
+}
+.border:focus {
+  border-color: var(--clr-primary-purplish-blue);
+}
+
+.light {
+  color: var(--clr-neutral-marine-blue);
+  font-weight: 400;
+  font-size: rem(16);
+}
+
+.medium {
+  color: var(--clr-neutral-cool-gray);
+  font-weight: 500;
+  font-size: rem(16);
+}
+
+.heavy {
+  color: var(--clr-primary-marine-blue);
+  font-weight: 700;
+  font-size: rem(16);
+}
+
+.-gbtn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--clr-neutral-w);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.-gbtn .btn {
+  margin-left: auto;
+  background-color: var(--clr-primary-marine-blue);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+}
+.-gbtn button {
+  background-color: transparent;
+  color: var(--clr-neutral-w);
 }/*# sourceMappingURL=style.css.map */
