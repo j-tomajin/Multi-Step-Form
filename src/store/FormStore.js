@@ -4,6 +4,8 @@ export const useFormStore = defineStore('form-store', {
   state: () => {
     return { 
       // states here 
+      isChecked: false,
+      plansStore: []
     }
   },
   getters: {
@@ -11,5 +13,8 @@ export const useFormStore = defineStore('form-store', {
   },
   actions: {
     // actions here
+    check() {
+      this.isChecked = !this.isChecked
+    }
   }
 })
