@@ -23,11 +23,15 @@
 }
 
 .light {
-  @include font(400, var(--clr-neutral-marine-blue))
+  @include font(400, var(--clr-primary-marine-blue))
 }
 
 .medium {
   @include font(500, var(--clr-neutral-cool-gray))
+}
+
+.medium-alt {
+  @include font(500, var(--clr-primary-marine-blue))
 }
 
 .heavy {
@@ -53,6 +57,15 @@
     background-color: var(--clr-primary-marine-blue);
     padding: rem(12) rem(24);
     border-radius: rem(8);
+  }
+
+  .back-btn {
+    margin-right: auto;
+    @include font(500, var(--clr-neutral-cool-gray));
+
+    &:hover {
+      color: var(--clr-primary-purplish-blue);
+    }
   }
   
   button {
