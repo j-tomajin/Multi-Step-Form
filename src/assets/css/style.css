@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 :root {
-  --clr-primary-marine-blue: hsl(213, 96%, 18%);
-  --clr-primary-purplish-blue: hsl(243, 100%, 62%);
-  --clr-primary-pastel-blue: hsl(228, 100%, 84%);
-  --clr-primary-l-blue: hsl(206, 94%, 87%);
-  --clr-primary-red: hsl(354, 84%, 57%);
-  --clr-neutral-cool-gray: hsl(231, 11%, 63%);
-  --clr-neutral-l-gray: hsl(229, 24%, 87%);
-  --clr-neutral-magnolia: hsl(217, 100%, 97%);
-  --clr-neutral-alabaster: hsl(231, 100%, 99%);
+  --clr-primary-marine-blue: rgb(2, 41, 90);
+  --clr-primary-purplish-blue: rgb(71, 61, 255);
+  --clr-primary-pastel-blue: rgb(173, 190, 255);
+  --clr-primary-l-blue: rgb(191, 226, 253);
+  --clr-primary-red: rgb(237, 53, 72);
+  --clr-neutral-cool-gray: rgb(150, 153, 171);
+  --clr-neutral-l-gray: rgb(214, 217, 230);
+  --clr-neutral-magnolia: rgb(240, 246, 255);
+  --clr-neutral-alabaster: rgb(250, 251, 255);
   --clr-neutral-w: hsl(0, 0%, 100%);
 }
 
@@ -111,15 +111,25 @@ hr {
   margin: 1em 0;
 }
 
-.sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0);
+.sr-only {
+  clip: rect(0, 0, 0, 0);
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
   height: 1px;
+  width: 1px;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
+}
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0, 0, 0, 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
   width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
 }
 
 #root,
@@ -168,13 +178,19 @@ a:not([class]) {
 }
 
 .light {
-  color: var(--clr-neutral-marine-blue);
+  color: var(--clr-primary-marine-blue);
   font-weight: 400;
   font-size: rem(16);
 }
 
 .medium {
   color: var(--clr-neutral-cool-gray);
+  font-weight: 500;
+  font-size: rem(16);
+}
+
+.medium-alt {
+  color: var(--clr-primary-marine-blue);
   font-weight: 500;
   font-size: rem(16);
 }
@@ -202,6 +218,15 @@ a:not([class]) {
   background-color: var(--clr-primary-marine-blue);
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
+}
+.-gbtn .back-btn {
+  margin-right: auto;
+  color: var(--clr-neutral-cool-gray);
+  font-weight: 500;
+  font-size: rem(16);
+}
+.-gbtn .back-btn:hover {
+  color: var(--clr-primary-purplish-blue);
 }
 .-gbtn button {
   background-color: transparent;
