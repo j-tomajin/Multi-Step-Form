@@ -70,17 +70,10 @@
         this.activeItem = index
         this.isValid = true 
 
-        // const newPlan = {
-        //   icon: plan.icon,
-        //   title: plan.title,
-        //   price: {
-        //     mo: plan.price.mo,
-        //     yr: plan.price.yr,
-        //   }
-        // } 
-
         this.plansStore.splice(0, 1) 
         this.plansStore.push(plan)
+
+        console.log(this.plansStore)
       }, 
     }
   }
