@@ -38,6 +38,10 @@
   @include font(700, var(--clr-primary-marine-blue))
 }
 
+.heavy-alt {
+  @include font(700, var(--clr-primary-purplish-blue))
+}
+
 .-gbtn {
   width: 100%;
   padding: rem(16);
