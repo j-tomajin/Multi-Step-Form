@@ -52,9 +52,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Ubuntu", sans-serif;
-  display: flex;
-  flex-direction: column;
-  background-color: #333;
+  display: grid;
+  background-color: var(--clr-neutral-magnolia);
+}
+@media (min-width: 48.75em) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -161,8 +167,14 @@ a:not([class]) {
 .container {
   background-color: var(--clr-neutral-w);
   padding: 1.5rem 2rem;
-  width: min(100% - 32px, 31.25rem);
-  margin-inline: auto;
+  border-radius: 1rem;
+  margin-inline: 1rem;
+}
+@media (min-width: 48.75em) {
+  .container {
+    margin-inline: 0;
+    position: relative;
+  }
 }
 
 .danger {
@@ -197,6 +209,18 @@ a:not([class]) {
 
 .heavy {
   color: var(--clr-primary-marine-blue);
+  font-weight: 700;
+  font-size: rem(16);
+}
+
+.heavy-alt {
+  color: var(--clr-primary-purplish-blue);
+  font-weight: 700;
+  font-size: rem(16);
+}
+
+.heavy-alt-2 {
+  color: var(--clr-neutral-w);
   font-weight: 700;
   font-size: rem(16);
 }
