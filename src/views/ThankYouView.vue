@@ -1,11 +1,21 @@
 <script>
+  import { storeToRefs } from 'pinia';
+  import { useFormStore } from '../store/FormStore';
   import thankyouIcon from '../assets/images/icon-thank-you.svg'
+
   export default {
-    name: '',
+    name: 'ThankYouView',
     data() {
       return {
         icon: thankyouIcon,
       }
+    },
+    setup() {
+      const formStore = useFormStore()
+
+      const { username, totalYr } = storeToRefs(formStore)
+
+      return { username, totalYr }
     }
   }
 </script>
@@ -16,7 +26,7 @@
       <img :src="icon" alt="check icon">
     </div>
 
-    <h1 class="heavy">Thank You</h1>
+    <h1 class="heavy">Thank You {{ username }}</h1>
     <p class="medium">
       Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at <span><a href="">support@loremgaming.com</a></span>.
     </p>
@@ -35,6 +45,12 @@
 
   .box {
     text-align: center;
+    padding-block: rem(64);
+
+    @include breakpointMin(medium-screen) {
+      padding-block: 0;
+      margin-block: auto;
+    }
   }
 
   a {

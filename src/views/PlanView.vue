@@ -139,7 +139,7 @@
   @use '../assets/scss/utilities/' as *;
 
   .head {
-    margin-bottom: clampf(24, 780, 32);
+    margin-bottom: clampf(24, 780, 375, 32);
   }
 
   .plans {

@@ -3,17 +3,22 @@
   import useValidate from '@vuelidate/core'
   import { required, email, minLength, sameAs, helpers } from '@vuelidate/validators'
   import { reactive, computed } from 'vue'
+  import { useFormStore } from '../store/FormStore'
+  import { storeToRefs } from 'pinia'
 
   export default {
     name: 'HomeView',
     setup() {
+      const formStore = useFormStore()
+
+      const { username } = storeToRefs(formStore)
+
       const state = reactive({
         name: '',
         email: '',
         phoneNum: '',
       })
 
-      const isRequired = (value) => value == ' '
       const mustBeValid = (value) => value.length === 10
 
       const rules = computed(() => {
@@ -37,7 +42,7 @@
 
       const v$ = useValidate(rules, state)
 
-      return { v$, state }
+      return { v$, state, username }
     },
     data() {
       return {
@@ -47,6 +52,8 @@
     methods: {
       submitForm() {
         this.v$.$validate()
+
+        this.username = this.state.name
 
         if(!this.v$.$error) {
           this.isDisable = false
@@ -143,7 +150,7 @@
   }
 
   .head {
-    margin-bottom: clampf(24, 780, 32);
+    margin-bottom: clampf(24, 780, 375, 32);
   }
 
   .form {
