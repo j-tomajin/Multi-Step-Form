@@ -5,11 +5,12 @@ export const useFormStore = defineStore('form-store', {
   state: () => {
     return { 
       // states here 
+      username: ref(''),
       isChecked: ref(false),
       plansStore: ref([
         {
           icon: '',
-          title: 'asd',
+          title: '',
           price: {
             mo: 0,
             yr: 0,
