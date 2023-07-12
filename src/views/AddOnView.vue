@@ -119,7 +119,7 @@
   @use '../assets/scss/utilities/' as *;
 
   .head {
-    margin-bottom: clampf(24, 780, 32);
+    margin-bottom: clampf(24, 780, 375, 32);
   }
 
   form {
@@ -149,7 +149,7 @@
       border-radius: rem(3);
 
       h2 {
-        font-size: clampf(18, 780, 24);
+        font-size: clampf(18, 780, 375, 24);
         margin-bottom: rem(8);
       }
 
