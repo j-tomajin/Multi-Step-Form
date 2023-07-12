@@ -3,10 +3,13 @@
 .container {
   background-color: var(--clr-neutral-w);
   padding: rem(24) rem(32);
+  border-radius: rem(16);
+  margin-inline: rem(16);
 
-  // temp values
-  width: min(calc(100% - 32px), rem(500));
-  margin-inline: auto;
+  @include breakpointMin(medium-screen) {
+    margin-inline: 0;
+    position: relative;
+  }
 }
 
 .danger {
@@ -40,6 +43,10 @@
 
 .heavy-alt {
   @include font(700, var(--clr-primary-purplish-blue))
+}
+
+.heavy-alt-2 {
+  @include font(700, var(--clr-neutral-w))
 }
 
 .-gbtn {

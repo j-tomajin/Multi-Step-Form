@@ -22,8 +22,7 @@
 
 // clamp
 // value: min-size, max-viewport-width, max-size
-@function clampf($minSize, $maxWidth, $maxSize) {
-    $minWidth: 375;
+@function clampf($minSize, $maxWidth, $minWidth, $maxSize) {
 
     $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
     $yAxis: -$minWidth * $slope + $minSize;
